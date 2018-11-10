@@ -1,9 +1,10 @@
-#NIKU 1.0
-####A next vesion of voice control desktop(niku0.0)
+>#NIKU 1.0
+>####A next vesion of voice control desktop(niku0.0)
 >niku is mainly fouced on linux
-
-[Read in Blog](sanjaykhanssk.wixsite.com/aboutme/blog)
-[About me](sanjaykhanssk.wixsite.com/resume)
+---------------------
+>[Read in Blog](sanjaykhanssk.wixsite.com/aboutme/blog)
+>[About me](sanjaykhanssk.wixsite.com/resume)
+------------------------------------------------------
 ![alt text](logo.png "Logo")
 
 

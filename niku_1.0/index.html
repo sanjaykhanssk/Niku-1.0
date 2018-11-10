@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="lib/OnsenUI/css/onsenui.css">
+  <link rel="stylesheet" href="lib/OnsenUI/css/onsen-css-components.css">
+  <script src="lib/OnsenUI/js/onsenui.min.js"></script>
+  <script src='clickbtn.js'></script>
+
+  <title>Niku</title>
+</head>
+
+<body onload="clickbtn()">
+  <ons-page>
+    <ons-toolbar class="toolbar">
+      <div class="center toolbar__center">Niku</div>
+    </ons-toolbar>
+
+    <ons-progress-bar indeterminate></ons-progress-bar>
+    <p>
+        <ons-button onclick="recon()" id='speak'>Speak</ons-button>
+    </p>
+
+
+    <h3 style="text-align: center">welcome SSK</h3>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <p>
+        <ons-input id="nikit" modifier="underbar" o  placeholder="Niku it" float></ons-input>
+      </p>
+
+      <p style="margin-top: 30px;">
+        <ons-button onclick="Send()">Niku do</ons-button>
+      </p>
+    </div>
+    <p style="text-align: center">Control Your Niku Client desktop Via this App.Type command on the Input box and click send
+      button
+    </p>
+    
+    <ons-list modifier="inset" id='voice_data'>
+      <ons-list-header>Voice data</ons-list-header>      
+
+    </ons-list>
+
+    <ons-list modifier="inset" id='reccived_data'>
+        <ons-list-header>From System</ons-list-header>      
+  
+      </ons-list>
+
+
+  </ons-page>
+  
+
+  <script>
+      function speak(text, callback) {
+        console.log('speak called:' + text);
+        var u = new SpeechSynthesisUtterance();
+        u.text = text;
+        u.lang = 'en-US';
+        
+        u.onend = function () {
+            if (callback) {
+
+                callback();
+            }
+        };
+
+        u.onerror = function (e) {
+            if (callback) {
+                callback(e);
+                
+            }
+        };
+        
+        speechSynthesis.speak(u);
+        
+    }
+
+    function recon() {
+      
+      var recognition = new webkitSpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+
+      recognition.onresult = function (e) {
+        var textarea = document.getElementById('voice_data');
+        for (var i = e.resultIndex; i < e.results.length; ++i) {
+          console.log(e.results[i][0].transcript);
+
+
+          if (e.results[i].isFinal) {
+            console.log('voice called')
+
+            result = e.results[i][0].transcript;
+
+            var firebaseref = firebase.database().ref();
+            firebaseref.child("from_web_speech").set(result);
+            console.log(result);            
+            voiceDataAdd = document.getElementById('voice_data');            
+            voiceData = '<ons-list-item modifier="longdivider">'+result+'</ons-list-item>';
+            voiceDataAdd.innerHTML += voiceData;
+            speak('listening')
+          }
+
+          }
+        }
+        recognition.start();
+       
+      }
+
+  </script>
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+  <script>
+          var config = {
+            apiKey: "AIzaSyBl9GFoOq8G1Rw15eb3ljFo5bMMHQQ5uHc",
+            authDomain: "niku-1531031167486.firebaseapp.com",
+            databaseURL: "https://niku-1531031167486.firebaseio.com",
+            projectId: "niku-1531031167486",
+            storageBucket: "niku-1531031167486.appspot.com",
+            messagingSenderId: "467228040338"
+          };
+          firebase.initializeApp(config);
+  </script>
+
+
+
+  <script>
+          var Send = function () {
+            var cmd = document.getElementById('nikit').value;
+            if (cmd != '') {
+
+              var firebaseref = firebase.database().ref();
+              firebaseref.child("from_web_app").set(cmd);
+
+
+              ons.notification.alert('Reached the cloud');
+              document.getElementById('nikit').value = '';
+
+              voiceDataAdd = document.getElementById('voice_data');
+            
+              voiceData = '<ons-list-item modifier="longdivider">'+cmd+'</ons-list-item>';
+              voiceDataAdd.innerHTML += voiceData;
+
+
+
+            }
+            else {
+              ons.notification.alert('Null Value!,Try again');
+            }
+          };
+
+  </script>
+</body>
+
+</html>

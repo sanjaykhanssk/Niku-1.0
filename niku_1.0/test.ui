@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>515</width>
+    <height>346</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLineEdit" name="inp">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>290</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ok">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>290</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ok</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="box">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>30</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
