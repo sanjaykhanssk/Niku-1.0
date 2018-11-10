@@ -1,9 +1,9 @@
-#NIKU 1.0 <br /> 
+# NIKU 1.0 <br /> 
 Implemented in python3 <br /> 
-A next vesion of voice control desktop(niku0.0) <br /> 
+### A next vesion of voice control desktop(niku0.0) <br /> 
 >niku is mainly fouced on linux <br /> 
 [niku 0.0 demo video](https://www.youtube.com/watch?v=A67odkNHfV8&t=0s&list=PLTQ41TEP2ikhO__sh_DHP17mG9aOOdZch&index=2)<br />
-#niku 1.0 video will be soon on youtube
+# niku 1.0 video will be soon on youtube
 ---------------------
 >[Read in Blog](sanjaykhanssk.wixsite.com/aboutme/blog)
 >[About me](sanjaykhanssk.wixsite.com/resume)
@@ -35,26 +35,26 @@ Yes now you can send commands from your app on android (or) a page from chrome w
 
 >Niku Android also available where you can send data or command from your app to desktop client of the niku
 
-#HOW TO RUN IT
+# HOW TO RUN IT
 There are two main file in niku1.0 folder namely
 >main.py
 >mainfire.py
 >index.html
 
-###main.py
+### main.py
 1.It's based on google speech synthesis,you change that to wit speech synthesis also
 2.Optinal GUI PYQT5 in main.py at end of program some lines or commanded for hiding the gui,If you want you can enable that
 3.This Accept all the data from App,Web input filed and 
 >if your using chrome you can just speek and it will send data to the Niku desktop client
-#mainfire.py
+# mainfire.py
 
-####why mainfire.py
+#### why mainfire.py
 >According to me or in my expreince The chrome speech synthesis is better than google speech synthesis API for python 
 
 1.If your using chrome as your browser,you can speek and it will recogonise it and sent to the client version of niku
 2.If you'r non-chrome user, it's like a chat app type it and send-it.That's it will start control your system
 
-##Examples:
+## Examples:
 >user:hey niku open inkscape
 
 >niku:opening inkscape
