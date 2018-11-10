@@ -1,6 +1,7 @@
->#NIKU 1.0
->####A next vesion of voice control desktop(niku0.0)
->niku is mainly fouced on linux
+>#NIKU 1.0 <br /> 
+Implemented in python3 <br /> 
+>####A next vesion of voice control desktop(niku0.0) <br /> 
+>niku is mainly fouced on linux <br /> 
 ---------------------
 >[Read in Blog](sanjaykhanssk.wixsite.com/aboutme/blog)
 >[About me](sanjaykhanssk.wixsite.com/resume)
@@ -62,7 +63,7 @@ There are two main file in niku1.0 folder namely
 ----------------------------
 >user:hey niku translate this to tamil
 
->niku:translating text to tamil\n
+>niku:translating text to tamil<br /> 
 >niku:Translated text saved in translated.txt
 ----------------------------
 
