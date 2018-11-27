@@ -2,7 +2,7 @@
 Implemented in python3 <br /> 
 ### A next vesion of voice control desktop(niku0.0) <br /> 
 >niku is mainly fouced on linux <br /> 
-[niku 1.0 demo video](https://www.youtube.com/watch?v=r5rgD769N0s&t=0s&list=PLTQ41TEP2ikjeXy1iwNXxUfA5dDvVOT6j&index=3)<br />
+[niku 1.0 demo video](https://youtu.be/r5rgD769N0s)<br />
 
 ---------------------
 >[Read in Blog](sanjaykhanssk.wixsite.com/aboutme/blog)
