@@ -44,8 +44,11 @@ There are two main file in niku1.0 folder namely
 
 ### main.py
 1.It's based on google speech synthesis,you change that to wit speech synthesis also
-2.Optinal GUI PYQT5 in main.py at end of program some lines or commanded for hiding the gui,If you want you can enable that
+<br />
+2.Optinal GUI PYQT5 in main.py at end of program some lines or commanded for hiding the gui,If you want you can enable that.
+<br />
 3.This Accept all the data from App,Web input filed and 
+<br />
 >if your using chrome you can just speek and it will send data to the Niku desktop client
 # mainfire.py
 
@@ -53,8 +56,9 @@ There are two main file in niku1.0 folder namely
 >According to me or in my expreince The chrome speech synthesis is better than google speech synthesis API for python 
 
 1.If your using chrome as your browser,you can speek and it will recogonise it and sent to the client version of niku
+<br />
 2.If you'r non-chrome user, it's like a chat app type it and send-it.That's it will start control your system
-
+<br />
 ## Examples:
 >user:hey niku open inkscape
 
