@@ -35,6 +35,27 @@ Yes now you can send commands from your app on android (or) a page from chrome w
 ![alt text](https://static.wixstatic.com/media/ee92ff_3ed02c59964349b680850f93d17bacc8~mv2.png/v1/fill/w_740,h_416,al_c,usm_0.66_1.00_0.01/ee92ff_3ed02c59964349b680850f93d17bacc8~mv2.png "niku web")
 
 >Niku Android also available where you can send data or command from your app to desktop client of the niku
+<br />
+
+# Requirements
+
+    1.pip3 install validators
+    2.pip3 install pyautogui
+    3.pip3 install notify2
+    4.pip3 install wit
+    5.pip3 install SpeechRecognition
+    6.pip3 install pyaudio
+    7.pip3 install textblob
+    8.pip3 install weather-api
+    9.duckduckgo for python  
+    10.google-calander api
+    11.firebase
+    12.festival
+    13.xsel
+
+<br />
+
+
 
 # HOW TO RUN IT
 There are two main file in niku1.0 folder namely
